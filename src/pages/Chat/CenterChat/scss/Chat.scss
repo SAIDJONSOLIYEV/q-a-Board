@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.chat-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  .user-continer {
+    height: 80px;
+    display: flex;
+    box-shadow: 0.5px 0.5px 1px #000;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #fff;
+    padding: 8px;
+    cursor: pointer;
+
+    .back-icon {
+      display: none;
+    }
+
+    .user-infos {
+      .names {
+        font-size: 18px;
+      }
+
+      .status {
+        font-size: 14px;
+        color: rgb(89, 214, 249);
+      }
+    }
+
+    .user-image {
+      width: 65px;
+      height: 65px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .chat {
+
+    .messages {
+      height: 70vh;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+
+      .user-image {
+        width: 55px;
+        height: 55px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+    }
+
+    .user-message-container {
+      display: flex;
+
+      padding: 10px;
+      flex-wrap: wrap-reverse;
+      gap: 5px;
+
+      .message {
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 10px;
+        color: #000;
+        word-wrap: break-word;
+        max-width: 80%;
+        inline-size: auto;
+
+        &.large {
+          inline-size: 100%;
+        }
+
+        .text {
+          font-size: 16px;
+        }
+
+        .time {
+          text-align: end;
+          font-size: 13px;
+        }
+      }
+
+      .user-image {
+        width: 55px;
+        height: 55px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .currentUser-message-container {
+      display: flex;
+      padding: 10px;
+      justify-content: end;
+      gap: 5px;
+      flex-wrap: wrap-reverse;
+      flex-direction: row-reverse;
+
+
+      .message {
+        display: inline-block;
+        background-color: #3c8df5;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 10px;
+        color: #fff;
+        word-wrap: break-word;
+        max-width: 80%;
+        inline-size: auto;
+
+        &.large {
+          inline-size: 100%;
+        }
+
+        .text {
+          font-size: 16px;
+        }
+
+        .time {
+          text-align: end;
+          font-size: 13px;
+        }
+      }
+
+      .user-image {
+        width: 55px;
+        height: 55px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .input-container {
+    padding: 0 10px;
+    width: 100%;
+
+    .form {
+      display: flex;
+      gap: 10px;
+
+      input {
+        padding: 10px;
+      }
+
+      .send-container {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        border: none;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .chat-container {
+    width: 100%;
+    display: flex;
+    margin-top: 64px;
+    padding: 1px;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  .back-icon {
+    display: block !important;
+  }
+
+  .chat {
+    .messages {
+      height: calc(100vh -85px) !important;
+    }
+
+    .user-message-container,
+    .currentUser-message-container {
+      flex-direction: column;
+
+
+    }
+  }
+
+  .input-container {
+    .form {
+
+      input {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .chat-container {
+    width: 100%;
+    display: flex;
+    margin-top: 64px;
+    padding: 0 10px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .back-icon {
+    display: block !important;
+  }
+
+  .chat {
+    .messages {
+      height: calc(100vh - 200px) !important;
+    }
+  }
+
+  .input-container {
+    .form {
+
+      input {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .chat-container {
+    width: 75%;
+  }
+
+  .chat {
+    .messages {
+      height: calc(100vh - 350px);
+    }
+  }
+}

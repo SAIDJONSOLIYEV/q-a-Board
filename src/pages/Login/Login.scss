@@ -1,0 +1,106 @@
+.login {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    .cart {
+        width: 700px;
+        height: 500px;
+        background-color: rgb(240, 240, 240);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px;
+        .google {
+            .google {
+                width: 30px;
+                height: 30px;
+            }
+
+            button {
+                width: 300px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                padding: 7px;
+                background-color: white;
+            }
+        }
+
+        p {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        button {
+            width: 150px;
+            // height: 1000px;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(224, 224, 224);
+        }
+
+        .input{
+            display: flex;
+            margin-top: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            background: #fff;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            input{
+              outline: none;
+              cursor: pointer;
+              border:none;
+              width: 100%;
+             
+            }
+            &:hover{
+              box-shadow:0.5px 0.5px 0.5px 2px black;
+            }
+            .icon-eye{
+              cursor: pointer;
+            }
+           }
+
+        .footers {
+            display: flex;
+            gap: 7px;
+
+            span {
+                text-decoration: underline;
+                color: blue;
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 900px) {
+    .login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: rgb(240, 240, 240);
+
+        .cart {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            box-shadow: none !important;
+            justify-content: center;
+
+            input {
+                padding: 8px;
+                width: 100%;
+            }
+        }
+    }
+}
